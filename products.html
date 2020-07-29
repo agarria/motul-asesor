@@ -57,11 +57,20 @@
                     <span class="cart-counter">12</span>
                 </span>
             </a>
-            <a class="open-menu-mobile">
+            <a id="menu_icon" class="open-menu-mobile" onclick="menu_mobile()">
                 <span class="lines"></span>
             </a>
         </div>
     </nav>
+    <div id="menu_mobile" class="menu-mobile">
+        <div class="mobile-content">
+            <a class="mobile-link" href="">Nosotros</a>
+            <a class="mobile-link" href="">Nuestros Productos</a>
+            <a class="mobile-link" href="">Encuentra un Distribuidor</a>
+            <a class="mobile-link" href="">Contacto</a>
+            <a class="mobile-link" href="">Programa Transportistas</a>
+        </div>
+    </div>
     <main>
         <div class="content content-flex no-padding main-auto-selection">
             <div class="main-selection-container">
@@ -311,4 +320,12 @@
     </main>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    function menu_mobile() {
+        var menu = document.getElementById("menu_mobile");
+        var icon = document.getElementById("menu_icon");
+        menu.classList.toggle("show-menu-mobile");
+        icon.classList.toggle("show-menu-icon");
+    }
+</script>
 </html>

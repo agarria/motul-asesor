@@ -323,6 +323,7 @@ nav {
     height: 100px;
     padding: 0 100px;
     margin: 0;
+    z-index: 999;
     background: linear-gradient(#fff 40px,#dedede);
     border-bottom: 2px solid #fff;
 }
@@ -1950,6 +1951,110 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 40%;
 }
 
+/* MENU MOBILE */
+
+.menu-mobile {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 0;
+    margin: 0;
+    z-index: 888;
+    background: #151515;
+    transition: all .3s ease;
+    transform: translate(-100%,0);
+}
+
+.show-menu-mobile {
+    transform: translate(0,0);
+}
+
+.show-menu-mobile .mobile-content .mobile-link {
+    animation: showmobilelink .3s ease forwards;
+    animation-delay: .3s;
+}
+
+@keyframes showmobilelink {
+    from { 
+        opacity: 0;
+        transform: translate(0,20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.mobile-content {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-link {
+    font-family: 'Graphik Light';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    margin: 0 0 10% 0;
+    color: #fff;
+    opacity: 0;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: translate(0,20px);
+    transition: all .3s ease;
+}
+
+.mobile-link:last-child {
+    width: 80%;
+    padding: 15px 0;
+    color: #fff;
+    background: #ED1C24;
+    float: none;
+    margin: 0 auto;
+}
+
+.mobile-link:after,
+.mobile-link:before {
+    content: "•";
+    position: relative;
+    display: block;
+    float: left;
+    color: #ED1C24;
+}
+
+.mobile-link:after {
+    margin: 0 0 0 10px;
+}
+
+.mobile-link:before {
+    margin: 0 10px 0 0;
+}
+
+.show-menu-icon .lines {
+    background: transparent;
+}
+
+.show-menu-icon .lines:after {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+.show-menu-icon .lines:before {
+    top: -8px;
+    transform: rotate(45deg);
+}
 
 
 
