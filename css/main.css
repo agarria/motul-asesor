@@ -2017,7 +2017,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 .mobile-link:last-child {
-    width: 80%;
+    width: 70%;
     padding: 15px 0;
     color: #fff;
     background: #ED1C24;
